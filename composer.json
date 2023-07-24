@@ -1,0 +1,22 @@
+{
+    "name": "root/example.com",
+    "authors": [
+        {
+            "name": "Mohamed Elgebaly"
+        }
+    ],
+    "require": {
+        "illuminate/collections": "^10.15"
+    },
+    "autoload": {
+        "psr-4": {
+            "Core\\": "Core/",
+            "Http\\": "Http/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
