@@ -3,6 +3,7 @@
 use Core\App;
 use Core\Database;
 use Core\Validator;
+use Core\Authenticator;
 
 $email = $_POST['email'];
 $password = $_POST['password'];
@@ -43,7 +44,7 @@ $db->query("INSERT INTO users(email, password) VALUES (:email, :password)", [
     "password"=> password_hash($password, PASSWORD_BCRYPT),
 ]);
 
-login([
+(new Authenticator)->login([
     'email'=>$email
 ]);
 
